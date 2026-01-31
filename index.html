@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Discipline - Typing Tutor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for digital/tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">TYPE<span class="highlight">NIZAM</span></div>
+        <button id="reset-btn" class="btn-sm">Reset Progress</button>
+    </header>
+
+    <main class="game-container">
+
+        <!-- Level Selector Overlay (Initially Active) -->
+        <div id="level-overlay" class="overlay active">
+            <div class="overlay-content">
+                <h2>Select Level</h2>
+                <div id="levels-grid" class="levels-grid">
+                    <!-- Javascript will populate this -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. Text Area -->
+        <div class="typing-area">
+            <div id="text-display" class="text-display">
+                <span class="text-completed"></span><span class="text-current cursor">T</span><span
+                    class="text-future">ype this...</span>
+            </div>
+        </div>
+
+        <!-- 2. Instruction Bar -->
+        <div class="instruction-bar">
+            <p id="finger-instruction">Press <span class="key-name">F</span> using <span class="finger-name">Left Index
+                    Finger</span></p>
+        </div>
+
+        <!-- Input Visuals Wrapper -->
+        <div class="input-area">
+            <!-- 3. Virtual Keyboard (60%) -->
+            <div class="keyboard-container">
+                <div id="virtual-keyboard" class="keyboard">
+                    <!-- Javascript will render keys -->
+                </div>
+            </div>
+
+            <!-- 4. Hands Visualization (40%) -->
+            <div class="hands-section">
+                <div class="hand left-hand">
+                    <div class="finger pinky" data-finger="left-pinky"></div>
+                    <div class="finger ring" data-finger="left-ring"></div>
+                    <div class="finger middle" data-finger="left-middle"></div>
+                    <div class="finger index" data-finger="left-index"></div>
+                    <div class="finger thumb" data-finger="left-thumb"></div>
+                    <div class="palm">L</div>
+                </div>
+                <div class="hand right-hand">
+                    <div class="finger thumb" data-finger="right-thumb"></div>
+                    <div class="finger index" data-finger="right-index"></div>
+                    <div class="finger middle" data-finger="right-middle"></div>
+                    <div class="finger ring" data-finger="right-ring"></div>
+                    <div class="finger pinky" data-finger="right-pinky"></div>
+                    <div class="palm">R</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Dashboard removed as per user request -->
+    </main>
+
+    <!-- Modal for Level Completion -->
+    <div id="completion-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Level Completed!</h2>
+            <p>Great job! Ready for the next challenge?</p>
+            <div class="modal-actions">
+                <button id="next-level-btn" class="btn-primary">Next Level</button>
+                <button id="replay-level-btn" class="btn-secondary">Replay</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Focus on accuracy. Speed comes with discipline.</p>
+    </footer>
+
+    <script src="levels.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
