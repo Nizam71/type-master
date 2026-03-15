@@ -252,10 +252,10 @@ header {
 /* Typing Area */
 .typing-area {
     background: #000;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     text-align: left;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     /* User requested minimization */
     line-height: 1.5;
     min-height: 120px;
